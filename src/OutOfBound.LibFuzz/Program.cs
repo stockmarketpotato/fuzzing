@@ -9,12 +9,8 @@ namespace OutOfBound.LibFuzz
         {
             Fuzzer.LibFuzzer.Run(data =>
             {
-                try
-                {
-                    var f = new OutOfBound.ClassUnderTest();
-                    f.FuzzMe(data.ToArray());
-                }
-                catch { }
+                var f = new OutOfBound.ClassUnderTest();
+                f.FuzzMe(data.ToArray());
             });
         }
     }

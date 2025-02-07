@@ -40,7 +40,7 @@ sharpfuzz/scripts/install.sh
 # --------------------------------------------------------- #
 # Build libfuzzer
 # --------------------------------------------------------- #
-clang -fsanitize=fuzzer,address libfuzzer-dotnet/libfuzzer-dotnet.cc -o /usr/local/bin/libfuzzer-dotnet
+sudo clang -fsanitize=fuzzer,address libfuzzer-dotnet/libfuzzer-dotnet.cc -o /usr/local/bin/libfuzzer-dotnet
 
 # --------------------------------------------------------- #
 # set core dump pattern to defaul "core"

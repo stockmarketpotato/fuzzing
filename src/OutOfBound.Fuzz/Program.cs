@@ -12,13 +12,9 @@ namespace OutOfBound.Fuzz
         {
             Fuzzer.OutOfProcess.Run(data =>
             {
-                try
-                {
-                    var f = new OutOfBound.ClassUnderTest();
-                    var bytes = Encoding.UTF8.GetBytes(data);
-                    f.FuzzMe(bytes);
-                }
-                catch { }
+                var f = new OutOfBound.ClassUnderTest();
+                var bytes = Encoding.UTF8.GetBytes(data);
+                f.FuzzMe(bytes);
             });
         }
     }
